@@ -1,5 +1,7 @@
-🧠 Dynamic MCP Database Agent
+#🧠 Dynamic MCP Database Agent
 An intelligent, locally running database agent that uses LLaMA 3.2 via Ollama and MySQL to dynamically convert natural language queries into SQL commands. Built with Python and designed for fast prototyping using the FastMCP framework.
+
+---
 
 📌 Features
 🔍 Natural language to SQL translation
@@ -16,36 +18,42 @@ An intelligent, locally running database agent that uses LLaMA 3.2 via Ollama an
 
 🧪 Connection testing for DB and LLM before execution
 
+---
+
 ⚙️ Requirements
-`Python 3.9+`
+```
+Python 3.9+
 
 MySQL Server running locally or in Docker
 
 Ollama running locally with llama3.2 pulled
 
 .env file for credentials
+```
+
+---
 
 🔧 Installation & Setup
 1. Clone the Repository
-bash
-Copy
-Edit
+```bash
+
 git clone https://github.com/HirushiKeshan/MCP-Database-Management.git
 cd MCP-Database-Management
+```
+
 2. Set Up Python Environment
-bash
-Copy
-Edit
+```bash
+
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 
+
 pip install -r requirements.txt
+
+```
 3. Set Up .env File
 Create a .env file in the root directory:
-
-ini
-Copy
-Edit
+```
 DB_HOST=localhost
 DB_PORT=3306
 DB_USER=root
@@ -54,15 +62,15 @@ DB_NAME=company
 
 OLLAMA_HOST=http://localhost:11434
 OLLAMA_MODEL=llama3.2
-4. Start Ollama & Pull Model
-Make sure Ollama is installed: https://ollama.com
+```
+###4. Start Ollama & Pull Model
 
-bash
-Copy
-Edit
+```Make sure Ollama is installed: https://ollama.com
+
 ollama pull llama3:instruct
+```
 5. Create the MySQL Table
-Run this in MySQL Workbench or terminal:
+`Run this in MySQL Workbench or terminal:
 
 sql
 Copy
